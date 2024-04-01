@@ -51,6 +51,7 @@ const [bg, setBg] = useState(sunnyBg);
     {weatherData && (
     <div className="app" style={{ backgroundImage: `url(${bg})` }}>
        <div className='temperature'>
+        {/* /shows the actual weather on the left side  */}
               <h1>{`${weatherData.temp.toFixed()} °${units === 'metric' ? 'C' : 'F'}`}</h1>
              
             </div>
@@ -61,7 +62,7 @@ const [bg, setBg] = useState(sunnyBg);
 
   <div className='container'>
           <div className='section section_inputs'>
-           
+           {/* /when the user types in the city they can hit enter and it search that city */}
             <input onKeyDown={enterKeyPressed}
              type="text" name='city' placeholder='Enter City..' />
             <button>°F</button>
@@ -69,7 +70,7 @@ const [bg, setBg] = useState(sunnyBg);
           </div>
          
           <div className='section section_temperature'>
-            
+            {/* shows the weather details on the right side  */}
            <div className='icon'>
             <h3>{`${weatherData.name}, ${weatherData.country}`}</h3>
             <hr/>

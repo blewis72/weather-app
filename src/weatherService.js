@@ -2,7 +2,7 @@
 const API_KEY='adc33d437180a08ec660022462a8008f'
 const makeIconURL = (iconId) => `http://openweathermap.org/img/wn/${iconId}.png`
 
-
+//how to get the weather information from the API
 const getFormattedWeatherData = async (city,units = 'metric') => {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=${units}`;
 
@@ -11,6 +11,7 @@ const getFormattedWeatherData = async (city,units = 'metric') => {
     .then((data)=>data);
 
     const {
+      
         weather,
         main: {temp, feels_like, temp_min, temp_max, pressure,humidity},
 wind:{speed},

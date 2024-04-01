@@ -14,7 +14,7 @@ const Descriptions = () => {
 
   }
  ] 
-
+//will display the forcast for the week. Havemt worked on this yet
   return (
 <div className='forcast'>
   <div className='card'>
