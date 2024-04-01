@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --section-overlay:rgba(0,0,0,0.7);
+  --background-overlay: rgba(0,0,0,0.2)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
+
+  .app{
+    width:100%;
+    height: 100vh;
+    background-position:center;
+    background-size: cover;
+  }
+
+  .overlay{
+    width:100%;
+    height:100vh;
+    background-color: var(--background-overlay);
+   
+  
+  }
+
+  .container{
+    
+   max-width: 700px;
+    height:100%;
+    display: flex;
+ 
+    
+    flex-direction: column;
+    
+    margin-left:68%;
+  }
+
+  /* top */
+
+  .section{
+    width:100%;
+    padding:1rem;
+   
+    color:white;
+  
+
+  }
+
+  .section_inputs, .section_temperature{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    background-color: var(--section-overlay);
+    height: 100%;
+  }
+
+  .section_inputs>input{
+    border: 0.8px solid white;
+    border-radius:0.4rem;
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem;
+    font-size: 20px;
+    font-weight:200;
+  }
+
+  .section_inputs>input:focus{
+    outline: none;
+  }
+
+  .section_inputs>button{
+   padding:10px 50px;
+   border: none;
+   border-radius: 0.4rem;
+   font-size: 20px;
+   font-weight:500;
+   background-color: white;
+  }
+
+  .section_inputs>button:hover{
+    background-color: lightgray;
+    cursor: pointer;
+  }
+  
+
+  .icon{
+    margin-bottom: 125%;
+    margin-left: 20%;
+    justify-content: space-between;
+
+    
+   
+  }
+
+  .icon>h3{
+    display: block;
+  text-align: center;
+    font-size: 40px;
+    font-weight:200;
+    text-transform: capitalize;
+    justify-content: center;
+    
+  }
+
+  .temperature>h1{
+    font-size:60px;
+  }
+
+  .temperature{
+    display:block;
+    position:absolute;
+    top:10%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50%;
+  }
+
+  
